@@ -1,4 +1,4 @@
-I mostly used [this guide](https://ajorloo.medium.com/deploy-rocket-chat-server-using-kubernetes-2d6c4228853).
+I mostly used [this guide](https://ajorloo.medium.com/deploy-rocket-chat-server-using-kubernetes-2d6c4228853) and pointed argo at this folder on github.
 
 `kubectl port-forward kubectl port-forward svc/rocketchat-server 8082:3000`
 
