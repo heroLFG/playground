@@ -1,37 +1,25 @@
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
-  name: rocketmongo
+  name: rocketchat-server
 spec:
-  serviceName: rocketmongo
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: rocketmongo
+      app: rocketchat-server
   template:
     metadata:
       labels:
-        app: rocketmongo
+        app: rocketchat-server
     spec:
-      terminationGracePeriodSeconds: 10
       containers:
-        - name: rocketmongo
-          image: mongo:4.0
-          command:
-          - mongod
-          - "--bind_ip_all"
-          - "--replSet"
-          - rs0
+        - name: rocketchat-server
+          image: rocketchat/rocket.chat:latest
           ports:
-            - containerPort: 27017
-          volumeMounts:
-          - name: mongo-volume
-            mountPath: /data/db
-  volumeClaimTemplates:
-  - metadata:
-      name: mongo-volume
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 5Gi
+            - containerPort: 3000
+          env:
+            - name: MONGO_URL
+              value: mongodb://rocketmongo-0.rocketmongo:27017/rocketchat
+            - name: MONGO_OPLOG_URL
+              value: mongodb://rocketmongo-0.rocketmongo:27017/local?replSet=rs0
+          imagePullPolicy: Always
