@@ -35,7 +35,7 @@ spec:
           containerPort: 8080
         args:
         - --api.insecure=true
-        - --providers.kubernetes
+        - --providers.kubernetescrd
         - --logLevel=DEBUG
 ---
 kind: Service
