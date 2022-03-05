@@ -34,6 +34,8 @@ spec:
         - name: admin
           containerPort: 8080
         args:
+        - --api=true
+        - --api.dashboard=true
         - --api.insecure=true
         - --providers.kubernetescrd
         - --log.level=DEBUG
