@@ -34,7 +34,7 @@ spec:
         - name: admin
           containerPort: 8080
         args:
-        - --providers.kubernetescrd.endpoint=http://localhost:8080
+        - --providers.kubernetescrd.endpoint=http://localhost:8001
         - --api=true
         - --api.dashboard=true
         - --api.insecure=true
