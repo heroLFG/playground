@@ -22,7 +22,7 @@ spec:
   - host: kubernetes.docker.internal
     http:
       paths:
-      - path: /
+      - path: /traefik
         pathType: Prefix
         backend:
           service:
