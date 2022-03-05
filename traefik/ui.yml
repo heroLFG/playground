@@ -27,4 +27,4 @@ spec:
           service:
             name: traefik-web-ui
             port:
-              number: 80
+              name: web
