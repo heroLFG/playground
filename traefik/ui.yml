@@ -18,8 +18,9 @@ metadata:
   name: traefik-web-ui
   namespace: kube-system
 spec:
+  ingressClassName: traefik-web-ui
   rules:
-  - host: kubernetes.docker.internal
+  - host: localhost
     http:
       paths:
       - path: /traefik
