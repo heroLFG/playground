@@ -38,6 +38,7 @@ spec:
         - --api.insecure=true
         - --entrypoints.http.address=:80
         - --entrypoints.https.address=:443
+        - --entrypoints.rocketchat.address=:3000
         - --providers.kubernetesingress=true
         - --log.level=DEBUG
 ---
