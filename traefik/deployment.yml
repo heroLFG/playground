@@ -42,7 +42,7 @@ spec:
         - --api.debug=true
         - --entrypoints.http.address=:80
         - --providers.kubernetesingress=true
-        - --providers.kubernetesingress.ingressendpoint.hostname=kubernetes.docker.internal
+        - --providers.kubernetesingress.ingressclass=traefik
         - --log.level=DEBUG
 ---
 kind: Service
