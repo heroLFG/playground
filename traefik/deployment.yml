@@ -37,6 +37,7 @@ spec:
           containerPort: 443
         args:
         - --api.dashboard=true
+        - --api.insecure=true
         - --entrypoints.http.address=:80
         - --entrypoints.https.address=:443
         - --entrypoints.admin.address=:8080
