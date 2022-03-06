@@ -40,7 +40,7 @@ spec:
         - --entrypoints.http.address=:80
         - --entrypoints.https.address=:443
         - --entrypoints.admin.address=:8080
-        - --providers.kubernetesingress
+        - --providers.kubernetesingress=true
         - --log.level=DEBUG
 ---
 kind: Service
