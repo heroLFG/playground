@@ -1,19 +1,19 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: k8s-dashboard
-  namespace: kubernetes-dashboard
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: http
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: k8s-dashboard
+#   namespace: kubernetes-dashboard
+#   annotations:
+#     traefik.ingress.kubernetes.io/router.entrypoints: http
 
-spec:
-  rules:
-    - http:
-        paths:
-          - path: /k8s-dashboard
-            pathType: Prefix
-            backend:
-              service:
-                name:  kubernetes-dashboard
-                port:
-                  number: 443
+# spec:
+#   rules:
+#     - http:
+#         paths:
+#           - path: /k8s-dashboard
+#             pathType: Prefix
+#             backend:
+#               service:
+#                 name:  kubernetes-dashboard
+#                 port:
+#                   number: 443
