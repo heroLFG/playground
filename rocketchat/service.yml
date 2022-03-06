@@ -21,6 +21,7 @@ metadata:
   name: rocketchat-server
   namespace: default
 spec:
+  type: LoadBalancer
   selector:
     app: rocketchat-server
   ports:
