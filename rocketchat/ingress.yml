@@ -3,7 +3,8 @@ kind: Ingress
 metadata:
   name: rocketchat
   namespace: default
-
+  annotations:
+    traefik.ingress.kubernetes.io/router.entrypoints: rocketchat
 spec:
   rules:
     - host: localhost
