@@ -36,9 +36,9 @@ spec:
         - name: https
           containerPort: 443
         args:
-        - --entrypoints.web.address=:80
-        - --entrypoints.web.address=:443
-        - --entrypoints.web.address=:8080
+        - --entrypoints.http.address=:80
+        - --entrypoints.https.address=:443
+        - --entrypoints.admin.address=:8080
         - --providers.kubernetesingress
         - --log.level=DEBUG
 ---
