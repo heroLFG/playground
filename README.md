@@ -8,12 +8,11 @@
 ## argocd does gitops and deploys from this repo
 `kubectl port-forward svc/argocd-server -n argocd 8080:80`
 
-## rocketchat is an open source chat
+## learning
 
-## k8s metrics server
-
-## k8s dashboard ui
-
-## traefik ingress routing and load balancing
-
-## prometheus metrics
+- k8s on docker for windows is limited
+  - unable to do traefik load balancing with the default k8s which comes with docker for windows
+    - https://docs.docker.com/desktop/kubernetes/
+      - `The Kubernetes server runs locally within your Docker instance, is not configurable, and is a single-node cluster`
+- minikube can be used to create k8s clusters with different versions: https://minikube.sigs.k8s.io/docs/start/
+  - `minikube start -p aged --kubernetes-version=v1.16.1`
