@@ -7,8 +7,7 @@ metadata:
     traefik.ingress.kubernetes.io/router.entrypoints: http
 spec:
   rules:
-    - host: localhost
-      http:
+    - http:
         paths:
           - path: /rocketchat
             pathType: Prefix
