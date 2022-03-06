@@ -46,7 +46,7 @@ metadata:
   name: traefik
   namespace: default
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: traefik
   ports:
