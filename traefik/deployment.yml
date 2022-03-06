@@ -42,8 +42,7 @@ spec:
         - --api.debug=true
         - --entrypoints.http.address=:80
         - --providers.kubernetesingress=true
-        - --providers.kubernetesingress.ingressclass=traefik
-        - --log.level=DEBUG
+        - --log.level=ERROR
 ---
 kind: Service
 apiVersion: v1
