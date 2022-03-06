@@ -4,7 +4,7 @@ metadata:
   name: rocketchat
   namespace: default
   annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: rocketchat
+    traefik.ingress.kubernetes.io/router.entrypoints: http
 spec:
   rules:
     - host: localhost
