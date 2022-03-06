@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: rocketmongo
+  namespace: default
 spec:
   serviceName: rocketmongo
   replicas: 3
@@ -42,6 +43,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: rocketchat-server
+  namespace: default
 spec:
   replicas: 1
   selector:
