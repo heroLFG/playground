@@ -1,5 +1,10 @@
 # playground
 
+- http://localhost:30011 - rocketchat
+- https://localhost:30012 - k8s-dashboard
+- http://localhost:30000 - prometheus
+- http://localhost:32000 - grafana
+
 ## argocd does gitops and deploys from this repo
 `kubectl port-forward svc/argocd-server -n argocd 8080:80`
 
