@@ -8,8 +8,7 @@ metadata:
 
 spec:
   rules:
-    - host: localhost
-      http:
+    - http:
         paths:
           - path: /k8s-dashboard
             pathType: Prefix
