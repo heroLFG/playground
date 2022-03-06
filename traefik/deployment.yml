@@ -33,8 +33,12 @@ spec:
           containerPort: 80
         - name: admin
           containerPort: 8080
+        - name: https
+          containerPort: 443
         args:
         - --entrypoints.web.address=:80
+        - --entrypoints.web.address=:443
+        - --entrypoints.web.address=:8080
         - --providers.kubernetesingress
         - --log.level=DEBUG
 ---
@@ -56,4 +60,8 @@ spec:
       port: 8080
       name: admin
       targetPort: 8080
+    - protocol: TCP
+      port: 443
+      name: https
+      targetPort: 443
   type: NodePort
