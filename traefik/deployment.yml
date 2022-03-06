@@ -34,12 +34,15 @@ spec:
         - name: https
           containerPort: 443
         args:
+        - --accesslog=true
+        - --accesslog.fields.headers.defaultmode=keep
+        - --api=true
         - --api.dashboard=true
         - --api.insecure=true
+        - --api.debug=true
         - --entrypoints.http.address=:80
-        - --entrypoints.https.address=:443
-        - --entrypoints.rocketchat.address=:3000
         - --providers.kubernetesingress=true
+        - --providers.kubernetesingress.ingressendpoint.hostname=kubernetes.docker.internal
         - --log.level=DEBUG
 ---
 kind: Service
