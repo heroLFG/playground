@@ -22,3 +22,5 @@
     - https://stackoverflow.com/questions/56046451/use-kind-to-install-different-kubernetes-version
     - `kind create cluster --image "kindest/node:v1.14.1"`
       - https://hub.docker.com/r/kindest/node/tags
+- instead of ngrok:
+  - https://jerrington.me/posts/2019-01-29-self-hosted-ngrok.html
