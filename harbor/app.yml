@@ -10,7 +10,6 @@ spec:
     repoURL: https://helm.goharbor.io
     targetRevision: 1.8.1
     helm:
-      releaseName: harbor
       valueFiles: ['values.yaml']
   destination:
     server: https://kubernetes.default.svc
