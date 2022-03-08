@@ -5,6 +5,7 @@
 - http://localhost:30000 - prometheus
 - http://localhost:32000 - grafana
 - http://localhost:30080 - gogs
+- http://localhost:30002 - harbor
 
 ## argocd does gitops and deploys from this repo
 `kubectl port-forward svc/argocd-server -n argocd 8080:80`
