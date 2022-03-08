@@ -7,7 +7,8 @@ spec:
   project: default
   source:
     chart: harbor
-    repoURL: https://helm.goharbor.io
+    repoURL: https://github.com/heroLFG/playground
+    path: harbor
     targetRevision: 1.8.1
     helm:
       valueFiles: ['values.yaml']
