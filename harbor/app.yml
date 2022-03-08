@@ -6,12 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    chart: harbor
-    repoURL: https://github.com/heroLFG/playground
+    repoURL: 'https://github.com/heroLFG/playground'
     path: harbor
-    targetRevision: 1.8.1
+    targetRevision: HEAD
     helm:
-      valueFiles: ['values.yaml']
+      valueFiles:
+        - values.yaml
   destination:
-    server: https://kubernetes.default.svc
+    server: 'https://kubernetes.default.svc'
     namespace: harbor
