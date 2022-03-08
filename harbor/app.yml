@@ -11,6 +11,9 @@ spec:
     targetRevision: 1.8.1
     helm:
       releaseName: harbor
+      values: |
+        expose:
+          type: nodePort
   destination:
     server: https://kubernetes.default.svc
     namespace: harbor
